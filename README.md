@@ -2,7 +2,7 @@
 
 This is my personal project
 
-Aug 2021 - Nov 2021Aug 2021 - Nov 2021
+Aug 2021 - Nov 2021
 
 ● Design the board-level peripheral circuits of Xilinx Basys FPGA, including power supply, communication interface, and display 8-bit parallel data through the digital tube.
 
