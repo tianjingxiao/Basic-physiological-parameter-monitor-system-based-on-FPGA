@@ -1,0 +1,565 @@
+
+*** Running vivado
+    with args -log topdesign.vds -m64 -mode batch -messageDb vivado.pb -notrace -source topdesign.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source topdesign.tcl -notrace
+Command: synth_design -top topdesign -part xc7a35tcpg236-1 -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'xadc_wiz_0' is locked:
+* IP definition 'XADC Wizard (3.0)' for IP 'xadc_wiz_0' has a newer minor version in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3628 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 321.289 ; gain = 114.129
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'topdesign' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:23]
+INFO: [Synth 8-638] synthesizing module 'DS18B20' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:107]
+	Parameter ClkCnt bound to: 250 - type: integer 
+	Parameter RstPulse bound to: 100 - type: integer 
+	Parameter Samples bound to: 16 - type: integer 
+	Parameter RSTIDLE bound to: 4'b0000 
+	Parameter RSTPUL bound to: 4'b0001 
+	Parameter RSTWAIT bound to: 4'b0010 
+	Parameter RSTPRE bound to: 4'b0011 
+	Parameter WIREIDLE bound to: 4'b0100 
+	Parameter WIREPUL bound to: 4'b0101 
+	Parameter WIREBIT bound to: 4'b0110 
+	Parameter WIRESFT bound to: 4'b0111 
+	Parameter READIDLE bound to: 4'b1000 
+	Parameter READPUL bound to: 4'b1001 
+	Parameter READBIT bound to: 4'b1010 
+	Parameter READSFT bound to: 4'b1011 
+	Parameter CMDIDLE bound to: 4'b1100 
+	Parameter CMDFUN bound to: 4'b1101 
+	Parameter CMDDELY bound to: 4'b1110 
+WARNING: [Synth 8-5788] Register DataL_reg in module DS18B20 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:194]
+WARNING: [Synth 8-5788] Register DataH_reg in module DS18B20 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:194]
+WARNING: [Synth 8-5788] Register TimingEn_reg in module DS18B20 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:272]
+WARNING: [Synth 8-5788] Register DqOut_reg in module DS18B20 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:118]
+WARNING: [Synth 8-5788] Register WireBus_reg in module DS18B20 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:329]
+WARNING: [Synth 8-5788] Register ReadData_reg in module DS18B20 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:258]
+INFO: [Synth 8-256] done synthesizing module 'DS18B20' (1#1) [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:107]
+INFO: [Synth 8-638] synthesizing module 'XADCdemo' [E:/download/FPGA/XADC_Demo/src/hdl/XADCdemo.v:22]
+INFO: [Synth 8-638] synthesizing module 'xadc_wiz_0' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.runs/synth_1/.Xil/Vivado-4536-Dc_Wang/realtime/xadc_wiz_0_stub.vhdl:33]
+WARNING: [Synth 8-350] instance 'XLXI_7' of module 'xadc_wiz_0' requires 22 connections, but only 21 given [E:/download/FPGA/XADC_Demo/src/hdl/XADCdemo.v:47]
+INFO: [Synth 8-256] done synthesizing module 'XADCdemo' (2#1) [E:/download/FPGA/XADC_Demo/src/hdl/XADCdemo.v:22]
+WARNING: [Synth 8-567] referenced signal 'xz' should be on the sensitivity list [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:62]
+WARNING: [Synth 8-567] referenced signal 'wendu' should be on the sensitivity list [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:62]
+INFO: [Synth 8-638] synthesizing module 'B_BCD' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:585]
+INFO: [Synth 8-256] done synthesizing module 'B_BCD' (3#1) [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:585]
+INFO: [Synth 8-638] synthesizing module 'mux2' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:98]
+INFO: [Synth 8-256] done synthesizing module 'mux2' (4#1) [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:98]
+INFO: [Synth 8-638] synthesizing module 'smg_ip_model' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:446]
+WARNING: [Synth 8-567] referenced signal 'data' should be on the sensitivity list [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:467]
+INFO: [Synth 8-226] default block is never used [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:486]
+INFO: [Synth 8-226] default block is never used [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:510]
+INFO: [Synth 8-226] default block is never used [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:534]
+INFO: [Synth 8-226] default block is never used [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:558]
+WARNING: [Synth 8-567] referenced signal 'duan_ctrl' should be on the sensitivity list [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:482]
+INFO: [Synth 8-256] done synthesizing module 'smg_ip_model' (5#1) [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:446]
+INFO: [Synth 8-256] done synthesizing module 'topdesign' (6#1) [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 358.516 ; gain = 151.355
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 358.516 ; gain = 151.355
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'xadc_wiz_0' instantiated as 'W1/XLXI_7' [E:/download/FPGA/XADC_Demo/src/hdl/XADCdemo.v:47]
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/download/FPGA/XADC_Demo/src/constraints/Basys3_Master.xdc]
+Finished Parsing XDC File [E:/download/FPGA/XADC_Demo/src/constraints/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/download/FPGA/XADC_Demo/src/constraints/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/topdesign_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/topdesign_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 649.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for W1/XLXI_7. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'NS_reg' in module 'DS18B20'
+INFO: [Synth 8-5546] ROM "rSftCnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "DqDir" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "DqDir" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "DqDir" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "TimingEn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "TimingEn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "DqOut" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "DqOut" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ReadData" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "NS" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "clk_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_400Hz" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "duan" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "duan0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 CMDIDLE |                  000000000000001 |                             1100
+                 RSTIDLE |                  000000000000010 |                             0000
+                  RSTPUL |                  000000000000100 |                             0001
+                 RSTWAIT |                  000000000001000 |                             0010
+                  RSTPRE |                  000000000010000 |                             0011
+                  CMDFUN |                  000000000100000 |                             1101
+                WIREIDLE |                  000000001000000 |                             0100
+                 WIREPUL |                  000000010000000 |                             0101
+                 WIREBIT |                  000000100000000 |                             0110
+                 WIRESFT |                  000001000000000 |                             0111
+                 CMDDELY |                  000010000000000 |                             1110
+                READIDLE |                  000100000000000 |                             1000
+                 READPUL |                  001000000000000 |                             1001
+                 READBIT |                  010000000000000 |                             1010
+                 READSFT |                  100000000000000 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'NS_reg' using encoding 'one-hot' in module 'DS18B20'
+WARNING: [Synth 8-327] inferring latch for variable 'duan_reg' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:485]
+WARNING: [Synth 8-327] inferring latch for variable 'duan3_reg' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:557]
+WARNING: [Synth 8-327] inferring latch for variable 'duan0_reg' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:485]
+WARNING: [Synth 8-327] inferring latch for variable 'duan1_reg' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:509]
+WARNING: [Synth 8-327] inferring latch for variable 'duan2_reg' [E:/download/FPGA/XADC_Demo/proj/XADC_Demo.srcs/sources_1/new/topdesign.v:533]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 11    
+	   3 Input      4 Bit       Adders := 4     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  40 Input     15 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	  16 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 9     
+	  10 Input      8 Bit        Muxes := 1     
+	  15 Input      8 Bit        Muxes := 3     
+	   4 Input      8 Bit        Muxes := 1     
+	  16 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	  16 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	  15 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 20    
+	  10 Input      1 Bit        Muxes := 5     
+	  15 Input      1 Bit        Muxes := 18    
+	   4 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module topdesign 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+Module DS18B20 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	  40 Input     15 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	  10 Input      8 Bit        Muxes := 1     
+	  15 Input      8 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  15 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	  10 Input      1 Bit        Muxes := 5     
+	  15 Input      1 Bit        Muxes := 18    
+Module XADCdemo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	  16 Input     16 Bit        Muxes := 1     
+Module B_BCD 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 4     
+	   3 Input      4 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	  16 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+Module mux2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module smg_ip_model 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  16 Input      8 Bit        Muxes := 2     
+	  16 Input      7 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'W1/da_reg' and it is trimmed from '16' to '8' bits. [E:/download/FPGA/XADC_Demo/src/hdl/XADCdemo.v:124]
+INFO: [Synth 8-5544] ROM "W0/ReadData" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "W0/DqDir" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "W0/rSftCnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "W0/TimingEn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "W0/TimingEn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "U4/clk_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "U4/clk_400Hz" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 649.992 ; gain = 442.832
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\W0/WireCmd_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\W1/Address_in_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\W1/Address_in_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\W1/Address_in_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\W1/da_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\W1/da_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U4/duan2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U4/duan1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U4/duan0_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U4/duan3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\W1/LED_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (U4/duan3_reg[7]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (U4/duan0_reg[7]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (U4/duan1_reg[7]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (U4/duan2_reg[7]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W0/WireCmd_reg[0]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/LED_reg[0]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/Address_in_reg[4]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/Address_in_reg[2]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/Address_in_reg[1]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W0/DataH_reg[7]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W0/DataH_reg[6]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W0/DataH_reg[5]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W0/DataH_reg[4]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/show_reg[6]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/show_reg[7]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/show_reg[8]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/show_reg[9]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/show_reg[10]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/show_reg[11]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/show_reg[12]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/show_reg[13]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/show_reg[14]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/show_reg[15]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/da_reg[1]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W1/da_reg[0]) is unused and will be removed from module topdesign.
+WARNING: [Synth 8-3332] Sequential element (W0/rSftCnt_reg[3]) is unused and will be removed from module topdesign.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 649.992 ; gain = 442.832
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 649.992 ; gain = 442.832
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin di_in[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin dwe_in
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin vp_in
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \W1/XLXI_7  has unconnected pin vn_in
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |xadc_wiz_0    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |xadc_wiz_0_bbox |     1|
+|2     |BUFG            |     1|
+|3     |CARRY4          |    39|
+|4     |LUT1            |   136|
+|5     |LUT2            |    36|
+|6     |LUT3            |    25|
+|7     |LUT4            |    56|
+|8     |LUT5            |    54|
+|9     |LUT6            |   109|
+|10    |FDCE            |    50|
+|11    |FDPE            |     2|
+|12    |FDRE            |   163|
+|13    |LD              |    36|
+|14    |IBUF            |    15|
+|15    |IOBUF           |     1|
+|16    |OBUF            |    28|
++------+----------------+------+
+
+Report Instance Areas: 
++------+---------+-------------+------+
+|      |Instance |Module       |Cells |
++------+---------+-------------+------+
+|1     |top      |             |   777|
+|2     |  U4     |smg_ip_model |   195|
+|3     |  W0     |DS18B20      |   226|
+|4     |  W1     |XADCdemo     |   309|
++------+---------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 649.992 ; gain = 442.832
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 19 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 649.992 ; gain = 107.027
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 649.992 ; gain = 442.832
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 91 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 37 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  LD => LDCE: 36 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+76 Infos, 44 Warnings, 19 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 649.992 ; gain = 403.953
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 649.992 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 17 02:07:43 2016...

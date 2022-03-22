@@ -1,0 +1,75 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Sat Dec 17 02:08:17 2016
+| Host         : Dc_Wang running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file topdesign_control_sets_placed.rpt
+| Design       : topdesign
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    22 |
+| Unused register locations in slices containing registers |    37 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              48 |           24 |
+| No           | No                    | Yes                    |              15 |            8 |
+| No           | Yes                   | No                     |              31 |            8 |
+| Yes          | No                    | No                     |              74 |           23 |
+| Yes          | No                    | Yes                    |              37 |           20 |
+| Yes          | Yes                   | No                     |              46 |           12 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+------------------------------+------------------------------+------------------+----------------+
+|       Clock Signal       |         Enable Signal        |       Set/Reset Signal       | Slice Load Count | Bel Load Count |
++--------------------------+------------------------------+------------------------------+------------------+----------------+
+|  U4/clk_400Hz            |                              |                              |                1 |              4 |
+|  Clk_IBUF_BUFG           | W0/CmdCnt                    | W0/FSM_onehot_NS[14]_i_3_n_0 |                2 |              4 |
+|  Clk_IBUF_BUFG           | W0/DataH[3]_i_1_n_0          |                              |                2 |              4 |
+|  Clk_IBUF_BUFG           | W0/wSftCnt[3]_i_1_n_0        | W0/FSM_onehot_NS[14]_i_3_n_0 |                2 |              4 |
+|  Clk_IBUF_BUFG           | W1/show_0                    |                              |                2 |              6 |
+|  U4/duan0_reg[6]_i_2_n_0 |                              |                              |                4 |              7 |
+|  U4/duan1_reg[6]_i_1_n_0 |                              |                              |                3 |              7 |
+|  U4/duan2_reg[6]_i_1_n_0 |                              |                              |                5 |              7 |
+|  U4/duan3_reg[6]_i_2_n_0 |                              |                              |                2 |              7 |
+|  Clk_IBUF_BUFG           | W0/ReadData[6]_i_2_n_0       | W0/ReadData[6]_i_1_n_0       |                1 |              7 |
+|  Clk_IBUF_BUFG           | W0/TimingCnt[6]_i_1_n_0      | W0/FSM_onehot_NS[14]_i_3_n_0 |                4 |              7 |
+|  Clk_IBUF_BUFG           | W0/WireEn                    | W0/FSM_onehot_NS[14]_i_3_n_0 |                1 |              7 |
+|  U4/duan_reg[7]_i_2_n_0  |                              |                              |                2 |              8 |
+|  Clk_IBUF_BUFG           |                              |                              |                7 |              8 |
+|  Clk_IBUF_BUFG           | W0/DataL[7]_i_1_n_0          |                              |                2 |              8 |
+|  Clk_IBUF_BUFG           | W0/WireBus[7]_i_1_n_0        |                              |                2 |              8 |
+|  Clk_IBUF_BUFG           |                              | W0/FSM_onehot_NS[14]_i_3_n_0 |                8 |             15 |
+|  Clk_IBUF_BUFG           | W0/FSM_onehot_NS[14]_i_1_n_0 | W0/FSM_onehot_NS[14]_i_3_n_0 |               11 |             15 |
+|  Clk_IBUF_BUFG           | W1/LED[15]_i_1_n_0           |                              |                6 |             15 |
+|  Clk_IBUF_BUFG           |                              | U4/clk_400Hz_0               |                8 |             31 |
+|  Clk_IBUF_BUFG           | en0_IBUF                     |                              |                9 |             33 |
+|  Clk_IBUF_BUFG           | en0_IBUF                     | W1/show_0                    |               11 |             39 |
++--------------------------+------------------------------+------------------------------+------------------+----------------+
+
+
